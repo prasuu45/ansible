@@ -7,11 +7,11 @@
   tasks:
   - name: print the information
     vars:
-      COURSE: "ansible"
-    ansible.builtin.debuge:
-      msg: "i am learing {{COURSE}} duration is: {{DURATION}} trainer is: {{TRAINER}}"
+     COURSE: "ansible"
+    ansible.builtin.debug:
+     msg: "I am learing {{COURSE}}, duration is: {{DURATION}} trainer is: {{TRAINER}}"
   
   - name: print the information
     ansible.builtin.debug:
-      msg: "i am learing {{COURSE}} duration is: {{DURATION}} trainer is: {{TRAINER}}"
+     msg: "I am learing {{COURSE}}, duration is: {{DURATION}} trainer is: {{TRAINER}}"
   
