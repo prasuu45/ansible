@@ -1,4 +1,4 @@
-- name: variables to print 
+- name: variables to print
   host: web
   vars:
    COURSE: "Devops with aws"
@@ -7,5 +7,4 @@
   tasks:
   - name: print the information
     ansible.builtin.debug:
-      msg: "i am learing {{COURSE}}, duration {{DURATION}} trainer {{TRAINER}} "
-       
+      msg: "i am learing {{COURSE}}, duration is: {{DURATION}} trainer: {{TRAINER}} "
