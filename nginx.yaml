@@ -4,10 +4,14 @@
   tasks:
   - name: install nginx
     ansible.builtin.package: #heterogenous module that can work for all distors
-     name: nginx
-     state: present
+      name: nginx
+      state: present
+      
   - name: run nginx
     ansibe.bultin.service:
-     name: nginx
-     state: started
-     enabled: yes
+      name: nginx
+      state: started
+      enabled: yes
+
+
+
