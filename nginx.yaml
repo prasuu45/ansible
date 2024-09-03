@@ -1,9 +1,9 @@
 - name: nginx install
   hosts: web
-  become: yes
+  become: yes # takes sudo access
   tasks:
   - name: install nginx
-    ansible.builtin.package:
+    ansible.builtin.package: # hetrogenous module that can work for all distros
       name: nginx
       state: present
 
@@ -13,7 +13,7 @@
       state: started
       enabled: yes
 
-      
+
     
 
 
