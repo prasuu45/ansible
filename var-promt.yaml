@@ -5,7 +5,8 @@
     prompt: please enter the course name
   - name: DURATION
     prompt: please enter the duration
-  - name: please enter the trainer name
+  - name: TRAINER
+    prompt: please enter the trainer name
 
   tasks:
   - name: print the information
