@@ -6,6 +6,10 @@
     TRAINER: "siva kumar"
   tasks:
   - name: print the information
+    ansible.builtin.debug:
+     msg: "I am learing {{COURSE}}, duration is: {{DURATION}} trainer is: {{TRAINER}}"
+  
+  - name: print the information
     vars:
      COURSE: "ansible"
     ansible.builtin.debug:
