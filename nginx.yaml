@@ -1,17 +1,19 @@
-- name: nginx install and run
+- name: nginx install
   hosts: web
-  become: yes #takes sudo access
+  become: yes
   tasks:
   - name: install nginx
-    ansible.builtin.package: #heterogenous module that can work for all distors
+    ansible.builtin.package:
       name: nginx
       state: present
-      
+
   - name: run nginx
-    ansibe.bultin.service:
+    ansible.builtin.service:
       name: nginx
       state: started
       enabled: yes
 
+      
+    
 
 
