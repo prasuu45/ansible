@@ -1,0 +1,23 @@
+- name: devops course information
+  hosts: local #target to ansible
+  connection: loacl
+  vars:
+      course: "devops with aws" #string
+      duration: 120
+      topics:
+      - linux
+      - shell
+      - ansible
+      - terrform
+      - aws
+      - k8
+      lives: true # boolen
+      tools: # map/dic
+       ci: jenkins  #string
+       cm: ansible
+       cloud: aws
+
+  tasks:
+  - name: print the course information
+    ansible.builtin.debug:
+     msg: "i am learing {{}}"
