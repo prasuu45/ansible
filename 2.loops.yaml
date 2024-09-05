@@ -9,6 +9,5 @@
     loop:
     - mysql
     - nginx
-    - debian
+    - dostfix
     - httpd
-    
