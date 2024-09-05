@@ -1,0 +1,17 @@
+- name: check number is > 10 or not
+  hosts: local
+  connection: local
+  vars:
+  - name: my_number
+    prompt: please enter the name
+    privatr: flase # not confidential
+  tasks:
+  - name: print less than 10
+    ansible.builtin.debug:
+      msg: "given number {{my_number}} is > 10"
+    when: my_number is > 10
+  - name: print greater than or equal to 10
+    ansible.builtin.debug:
+      msg: "given number {{my_number}} is <= 10"
+    when: my_number is <= 10
+    
