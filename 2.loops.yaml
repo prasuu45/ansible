@@ -9,5 +9,5 @@
     loop:
     - mysql
     - nginx
-    - dostfix
+    - postfix
     - httpd
