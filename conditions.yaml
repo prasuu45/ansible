@@ -1,7 +1,7 @@
 - name: check number is > 10 or not
   hosts: local
   connection: local
-  vars:
+  vars_prompt:
   - name: my_number
     prompt: please enter the number 
     privatr: flase # not confidential
