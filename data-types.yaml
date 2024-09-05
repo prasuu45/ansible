@@ -1,6 +1,6 @@
 - name: devops course information
-  hosts: local #target to ansible
-  connection: loacl
+  hosts: web #target to ansible
+  became: yes
   vars:
       course: "devops with aws" #string
       duration: 120
