@@ -3,15 +3,14 @@
   connection: local
   vars:
   - name: my_number
-    prompt: please enter the name
+    prompt: please enter the number 
     privatr: flase # not confidential
   tasks:
   - name: print less than 10
     ansible.builtin.debug:
-      msg: "given number {{my_number}} is > 10"
-    when: my_number is > 10
+      msg: "given number {{my_number}} is less than 10"
+    when: my_number is < 10
   - name: print greater than or equal to 10
     ansible.builtin.debug:
-      msg: "given number {{my_number}} is <= 10"
-    when: my_number is <= 10
-    
+      msg: "given number {{my_number}} is >= 10"
+    when: my_number is >= 10
