@@ -1,6 +1,6 @@
 - name: create user
   hosts: web
-  became: yes
+  become: yes
   tasks:
   - name: check user exits
     ansible.builtin.command: id expence
@@ -14,4 +14,4 @@
   - name: create user
     ansible.builtin.command: useradd expence
     when: USER.rc != 0
-    
+
