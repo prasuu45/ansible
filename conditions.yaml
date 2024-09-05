@@ -1,16 +1,16 @@
-- name: check number is > 10 or not
+- name: check number is less then 10 or not
   hosts: local
   connection: local
   vars_prompt:
   - name: my_number
-    prompt: please enter the number 
-    privatr: flase # not confidential
+    prompt: please enter the number
+    private: flase
   tasks:
-  - name: print less than 10
+  - name: print this less than 10
     ansible.builtin.debug:
       msg: "given number {{my_number}} is less than 10"
-    when: my_number | intis < 10
-  - name: print greater than or equal to 10
+    when: my_number | int < 10
+  - name: print this greater than or equal to 10
     ansible.builtin.debug:
-      msg: "given number {{my_number}} is >= 10"
-    when: my_number | int is >= 10
+      msg: "given number {{my_number}} is greter then or equal to 10"
+    when: my_number | int >= 10
