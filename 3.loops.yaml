@@ -2,7 +2,7 @@
   hosts: web
   become: yes
   tasks:
-  - name: install and unistall packages
+  - name: install packages
     ansible.builtin.package:
       name: "{{item.name}}"
       state: "{{item.state}}"
@@ -11,4 +11,3 @@
     - {name: 'nginx' , state: 'absent'}
     - {name: 'postfix' , state: 'absent'}
     - {name: 'httpd' , state: 'present'}
-    
