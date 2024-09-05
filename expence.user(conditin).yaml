@@ -5,7 +5,7 @@
   - name: check user exits or not
     ansible.builtin.command: id expence
     register: USER # here user is a variable that gets outputs from the above command
-    ignor_errors: True
+    ignore_errors: True
 
   - name: prient the user information
     ansible.builtin.debug:
