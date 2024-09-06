@@ -22,8 +22,8 @@
       security_group: "sg-02c4c043a85fe8c60"
       image_id: "ami-09c813fb71547fc4f"
     loop: "{{ instances }}"
-    register: ec2-instances
+    register: ec2_instances
 
   - name: print the output
     ansible.builtin.debug:
-      msg: "{{ ec2-instances }}"
+      msg: "{{ ec2_instances }}"
