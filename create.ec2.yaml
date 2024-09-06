@@ -1,6 +1,6 @@
 - name: create ec2_instances
-  hosts: web
-  become: yes
+  hosts: local
+  connection: local
   vars:
     instances:
     - mysql
