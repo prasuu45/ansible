@@ -13,7 +13,6 @@
       - boto3
       - botocore
       executable: pip3.9
-      zone: hinatadream.online
   
   - name: create ec2-instances
     amazon.aws.ec2_instance:
